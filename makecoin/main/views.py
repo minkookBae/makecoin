@@ -6,18 +6,20 @@ def keyboard(request):
  
         return JsonResponse({
                 'type' : 'buttons',
-                'buttons' : ['1','2']
+                'buttons' : ['하창권','배민국','박희원']
+
                 })
  
 @csrf_exempt
 def message(request):
-        return_str = "이게 답이다"
+        return_str = "멍청이 개발자"
         return JsonResponse({
                 'message': {
-                        'text': "you type "+return_str+"!"
+                        'text': "아직까지는 "+return_str+"!"
                 },
                 'keyboard': {
                         'type': 'buttons',
-                        'buttons': ['1','2']
+                        'buttons': ['하창권','배민국','박희원']
                 }
         })
+
